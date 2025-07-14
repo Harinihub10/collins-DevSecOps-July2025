@@ -1,0 +1,11 @@
+ Login into aws cccount by   dashboard / console by below credentials 
+
+
+https://177307970454.signin.aws.amazon.com/console
+
+collins
+
+
+@Training@1234
+
+  Create one ec2 machine - ubuntu 24.04 verson t3a.micro  –  and using ssh access that machine in your laptop 
