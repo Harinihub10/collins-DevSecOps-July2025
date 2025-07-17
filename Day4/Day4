@@ -1,0 +1,61 @@
+oot@mayank:~# history
+    1  docker
+    2  apt update && apt install docker.io -y
+    3  systemctl status docker
+    4  docker
+    5  docker  info
+    6  uname -r
+    7  docker info | grep -i kervel
+    8  docker info | grep -i kernel
+    9  docker images
+   10  docker ps
+   11  docker ps -a
+   12  docker search ubuntu
+   13  docker pull ubuntu
+   14  docker images
+   15  docker inspect ubuntu
+   16  docker history ubuntu
+   17  docker run ubuntu
+   18  docker ps
+   19  docker ps -a
+   20  docker history hello-world
+   21  docker pull hello-world
+   22  docker history hello-world
+   23  docker images
+   24  docker run hello-world
+   25  docker run   hello-world
+   26  docker ps -a
+   27  docker run -it   ubuntu
+   28  docker ps -a
+   29  docker rename happy_carver  mayank
+   30  docker ps -a
+   31  docker run -it --name web1   ubuntu
+   32  docker ps -a
+   33  docker start web1
+   34  docker ps -a
+   35  docker ps
+   36  docker exec -it  web1  bash
+   37  docker ps
+   38  docker stop web1
+   39  docker ps
+   40  docker ps -a
+   41  docker rm b9a955c35982
+   42  docker ps -a
+   43  docker ps
+   44  docker ps -a
+   45  docker run  ubuntu
+   46  docker ps -a
+   47  docker images
+   48  docker rmi ubuntu
+   49  docker rmi -f  ubuntu
+   50  docker images
+   51  docker ps -a
+   52  bash
+   53  docker run -it ubuntu
+   54  docker ps a
+   55  docker ps -a
+   56  docker run -it ubuntu
+   57  docker ps
+   58  docker history ubuntu
+
+
