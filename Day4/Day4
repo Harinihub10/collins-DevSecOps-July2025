@@ -59,3 +59,64 @@ oot@mayank:~# history
    58  docker history ubuntu
 
 
+
+
+
+
+ 38  docker stop web1
+   39  docker ps
+   40  docker ps -a
+   41  docker rm b9a955c35982
+   42  docker ps -a
+   43  docker ps
+   44  docker ps -a
+   45  docker run  ubuntu
+   46  docker ps -a
+   47  docker images
+   48  docker rmi ubuntu
+   49  docker rmi -f  ubuntu
+   50  docker images
+   51  docker ps -a
+   52  bash
+   53  docker run -it ubuntu
+   54  docker ps a
+   55  docker ps -a
+   56  docker run -it ubuntu
+   57  docker ps
+   58  docker history ubuntu
+   59  history
+   60  docker ps -a
+   61  docker exex -it romantic_bassi
+   62  docker exex -it romantic_bassi bash
+   63  docker exec  -it romantic_bassi bash
+   64  docker ps
+   65  docker rmi -f ubuntu
+   66  docker ps
+   67  docker run ubuntu
+   68  docker ps -a
+   69  docker start serene_maxwell
+   70  docker ps -a
+   71  docker run -itd  ubuntu
+   72  docker ps
+   73  docker stop brave_margulis
+   74  docker start  brave_margulis
+   75  docker ps
+   76  docker run -it --name web11  ubuntu
+   77  docker ps
+   78  docker inspect web11
+   79  curl 172.17.0.4
+   80  docker ps
+   81  docker exec -it web11 bash
+   82  docker run  -it --name web12 -p 3500:80 ubuntu
+   83  history
+   84  docker run  -it --name web13 -p 3501:80 httpd
+   85  docker run  -itd --name web14 -p 3502:80 httpd
+   86  docker run  -itd --name web15 -p 3503:80 nginx
+   87  docker run  -itd --name web16 -p 3504:80 mdhack/myserver
+   88  docker run  -itd --name web17 -p 3505:80 mdhack/myapache
+   89  docker run  -itd --name web18 -p 3506:80 mdhack/mayanknginximage
+   90  history
+   91  docker ps
+   92  history
+
+
