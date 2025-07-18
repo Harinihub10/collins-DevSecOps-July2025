@@ -1,0 +1,20 @@
+  38  ls
+   39  vim index.html
+   40  docker ps
+   41  ls
+   42  vim index.html
+   43  docker cp index.html  elegant_antonelli:/var/www/html/
+   44  cd ..
+   45  ls
+   46  cd pythoncodedocker/
+   47  ls
+   48  cat hello.py
+   49  cat Dockerfile
+   50  docker build -t python .
+   51  docker run -it python
+   52  docker run -itd  python
+   53  docker ps
+   54  docker logs fervent_swanson
+   55  docker logs -f  fervent_swanson
+   56  history
+
