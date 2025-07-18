@@ -83,3 +83,57 @@ COPY   mayank.html  .
 
 
 CMD  ["httpd",  "-DFOREGROUND"]
+
+
+
+
+Script of pre req configuration of kubernets in on github below url 
+
+
+https://github.com/mdhack0316/k8s/blob/master/master.sh
+
+
+Master machine 
+
+oot@master:~# history
+    1  vim a.sh
+    2  cat a.sh
+    3  bash a.sh
+    4  kubeadm init --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=0.0.0.0  --apiserver-cert-extra-sans=54.219.169.182
+    5  mkdir .kube
+    6  cp /etc/kubernetes/admin.conf   .kube/config
+    7  kubectl get nodes
+    8  curl https://raw.githubusercontent.com/projectcalico/calico/v3.30.2/manifests/calico.yaml -O
+    9  ls
+   10  kubectl create -f calico.yaml
+   11  watch kubectl get nodes	
+   12  kubectl get nodes
+   13  history
+
+
+
+
+Worker machine
+
+
+    1  vim a.sh
+    2  bash a.sh
+    3  kubeadm join 172.31.21.39:6443 --token 1rlobw.dtesetzavq0azkra         --discovery-token-ca-cert-hash sha256:eddd91b2b6612ada3ce592863899d115899f23e28d4a9a48d5c6a099cb826d52
+    4  history
+
+
+
+
+  11  watch kubectl get nodes
+   12  kubectl get nodes
+   13  history
+   14  kubectl api-versions
+   15  kubectl api-resources
+   16  kubectl api-resources | wc -l
+   17  kubectl get nodes
+   18  kubectl get ns
+   19  history
+
+cd $HOME ; mkdir $HOME/.kube/ ; cd $HOME/.kube ; wget  54.219.169.182/config ; kubectl get nodes
+
+
