@@ -1,4 +1,41 @@
-  38  ls
+
+	   4  docker login  collins.docker.hub.io
+    5  ls
+    6  mkdir code
+    7  cd code/
+    8  ls
+    9  vim Dockerfile
+   10  cat Dockerfile
+   11  docker build -t myownimage  .
+   12  ls
+   13  echo  Mayank > mayank.html
+   14  ls
+   15  docker build -t myownimage  .
+   16  docker images
+   17  docker history ubuntu
+   18  docker history myownimage
+   19  docker  run -itd -p 3400:80 myownimage
+   20  docker login
+   21  docker login -u mdhack
+   22  docker images
+   23  docker tag myownimage:latest    docker.io/mdhack/collinsdevsecops
+   24  docker images
+   25  docker push mdhack/collinsdevsecops
+   26  git clone https://github.com/mdhack0316/dockerfile
+   27  cd dockerfile/
+   28  ls
+   29  cd normalwebsite/
+   30  ls
+   31  vim Dockerfile
+   32  mv Dockerfile  mayankfile
+   33  vim index.html
+   34  docker build -t mozilla  .
+   35  docker build -t mozilla -f mayankfile  .
+   36  docker images
+   37  docker run -itd -p  3434:80 mozilla
+
+
+38  ls
    39  vim index.html
    40  docker ps
    41  ls
@@ -18,3 +55,31 @@
    55  docker logs -f  fervent_swanson
    56  history
 
+
+
+# choosing base image
+FROM  oraclelinux:8.3
+
+#Author Name
+MAINTAINER   mayank
+
+
+#Installing Apache
+
+RUN  yum install httpd -y
+
+
+#Choosing the workdir
+WORKDIR    /var/www/html/
+
+#Creting the code
+RUN  echo "Hello From Dckerfile" >    index.html
+
+
+#Copying the mayank html file
+COPY   mayank.html  .
+
+#Starting the service ParentProcerss
+
+
+CMD  ["httpd",  "-DFOREGROUND"]
