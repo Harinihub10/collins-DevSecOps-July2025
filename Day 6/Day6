@@ -121,3 +121,89 @@ spec:
 status: {}
 
 
+
+Kubernetes Service 
+
+
+
+ 118  kubectl run  mayankpod --image nginx
+  119  kubectl run  mayankpod --image nginx --show-labels
+  120  kubectl get pods --show-labels
+  121  kubectl describe pod mayankpod
+  122  kubectl get pods -o wide
+  123  curl 192.168.104.32
+  124  kubectl expose pod mayankpod --port 80
+  125  kubectl get svc
+  126  curl 10.101.227.23
+  127  kubectl get pods -o wide
+  128  kubectl describe svc mayankpod
+  129  kubectl delete pod mayankpod
+  130  kubectl describe svc mayankpod
+  131  kubectl run  mayankpod --image nginx
+  132  kubectl get pods -o wide
+  133  kubectl describe svc mayankpod
+  134  curl 10.101.227.23
+  135  kubectl create deployment mayank --image nginx
+  136  kubectl expose deployment mayank --port 80
+  137  kubectl get pods -o wide --show-labels
+  138  kubectl get svc
+  139  curl 10.96.189.35
+  140  kubectl describe svc mayank
+  141  kubectl delete pod mayank-5646945c45-hmx9r
+  142  kubectl get pods -o wide --show-labels
+  143  kubectl describe svc mayank
+  144  curl 10.96.189.35
+  145  kubectl expose deployment mayank  --port 80   --type NodePort  --name modi
+  146  kubectl get svc
+  147  kubectl describe svc modi
+  148  kubectl get pods -o wide
+  149  kubectl delete pod mayank-5646945c45-rd5l8
+  150  kubectl get pods -o wide
+  151  kubectl describe svc modi
+  152  kubectl get pods -o wide
+  153  kubectl delete svc --all
+  154  kubectl get all
+  155  kubectl delete pod mayankpod
+  156  kubectl get all
+  157  kubectl get all  --show-labels
+  158  kubectl create service nodeport  --tcp 80  trainer
+  159  kubectl get svc
+  160  kubectl describe svc trainer
+  161  kubectl get pods --show-labels
+  162  kubectl edit svc trainer
+  163  kubectl describe svc trainer
+  164  kubectl get pods --show-labels -o wide
+  165  kubectl delete svc trainer
+  166  kubectl get svc
+  167  kubectl create service nodeport  --tcp 80  trainer  --dry-run -o yaml
+  168  kubectl create service nodeport  --tcp 80  trainer  --dry-run -o yaml  > 3-svc.yml
+  169  vim 3-svc.yml
+  170  kubectl create -f 3-svc.yml
+  171  kubectl get svc
+  172  kubectl describe svc trainer
+  173  kubectl edit svc trainer
+  174  kubectl describe svc trainer
+  175  history
+
+root@master:~/code# cat 3-svc.yml
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: trainer
+  name: trainer
+spec:
+  ports:
+  - name: "80"
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: trainer
+  type: NodePort
+status:
+  loadBalancer: {}
+
+
+
