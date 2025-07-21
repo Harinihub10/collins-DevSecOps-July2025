@@ -1,0 +1,123 @@
+rm -rf $HOME/.kube ; mkdir $HOME/.kube/ && cd $HOME/.kube ; wget 13.204.85.125/config ; kubectl get nodes
+
+
+
+
+30  kubectl get nodes
+   31  kubectl run pod --image nginx
+   32  kubectl get pods
+   33  kubectl get pods  -p wide
+   34  kubectl get pods  -o wide
+   35  kubectl describe pod pod
+   36  kubectl get pods  -o wide
+   37  curl 192.168.3.65
+   38  kubectl delete all --all --force
+   39  kubectl get namespace
+   40  kubectl get  pods
+   41  kubectl create ns mayank
+   42  kubectl get namespace
+   43  kubectl get  pods
+   44  kubectl get  pods --namespace mayank
+   45  kubectl config get-contexts
+   46  kubectl config set-context  kubernetes-admin@kubernetes   --namespace mayank
+   47  kubectl config get-contexts
+   48  kubectl get pds
+   49  kubectl get posd
+   50  kubectl get pods
+   51  kubectl get pods -n default
+   52  kubectl run  mayankpod --image nginx
+   53  kubectl ge pods
+   54  kubectl get pods
+   55  kubectl get pods -o wide
+   56  curl 192.168.104.1
+   57  kubectl describe pod   mayankpod
+   58  kubectl delete pod mayankpod
+   59  kubectl get al;l
+   60  kubectl get all
+   61  kubectl get pods
+   62  kubectl create deployment mayank  --image nginx
+   63  kubectl get deployment
+   64  kubectl get rs
+   65  kubectl get pods
+   66  kubectl get all
+   67  kubectl delete pod mayank-5646945c45-qtvck
+   68  kubectl get all
+   69  kubectl delete rs mayank-5646945c45
+   70  kubectl get all
+   71  kubectl get rs -o wide
+   72  kubectl describe  rs mayank-5646945c45
+   73  kubectl delete deployment mayank
+   74  kubectl get all
+   75  history
+
+ 83  ls
+   84  vim 1-pod.yaml
+   85  kubectl api-resources
+   86  vim 1-pod.yaml
+   87  kubectl api-resources
+   88  vim 1-pod.yaml
+   89  ls
+   90  kubectl get pods
+   91  cat 1-pod.yaml
+   92  kubectl create -f  1-pod.yaml
+   93  kubectl get all
+   94  kubectl get all  -o wide
+   95  kubectl describe pod yamlpod
+   96  kubectl delete -f 1-pod.yaml
+   97  cat 1-pod.yaml
+   98  kubectl create deployment mayank  --image nginx --dry-run
+   99  kubectl get all
+  100  kubectl create deployment mayank  --image nginx --dry-run    -o yaml
+  101  kubectl run pod --image nginx --dry-run -o yaml
+  102  kubectl create deployment mayank  --image nginx --dry-run    -o yaml
+  103  kubectl create deployment mayank  --image nginx --dry-run    -o yaml  > 2-dep.yaml
+  104  cat 2-dep.yaml
+  105  kubectl get all
+  106  kubectl create -f 2-dep.yaml
+  107  kubectl get all
+  108  kubectl delete -f 2-dep.yaml
+  109  hi
+  110  hsi
+
+
+
+
+root@master:~/code# cat 1-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: yamlpod
+spec:
+  containers:
+  - name: mayank
+    image: nginx
+
+
+
+root@master:~/code# cat 2-dep.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mayank
+  name: mayank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mayank
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mayank
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}
+
+
