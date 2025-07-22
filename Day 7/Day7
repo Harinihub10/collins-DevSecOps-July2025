@@ -1,0 +1,140 @@
+66  git clone https://github.com/mdhack0316/javamavenapp
+   67  cd javamavenapp/
+   68  ls
+   69  ls -l
+   70  cat Jenkinsfile
+   71  ls
+   72  vim pom.xml
+   73  cd
+   74  git clone https://github.com/mdhack0316/java-springboot\
+   75  git clone https://github.com/mdhack0316/java-springboot
+   76  cd java
+   77  ls
+   78  cd java-springboot/
+   79  vim pom.xml
+   80  cd ..
+   81  ls
+   82  cd java
+   83  cd javamavenapp/
+   84  ls
+   85  mvn
+   86  apt install maven -y
+   87  ls
+   88  mvn clean packag
+   89  mvn clean package
+   90  ls
+   91  cd target/
+   92  ls
+   93  mv my-app-1.0-SNAPSHOT.jar   my-app.jar
+   94  ls
+   95  cd ..
+   96  ls
+   97  vim Dockerfile
+   98  docker build -t  javamayank .
+   99  docker images
+  100  docker run -it  javamayank
+  101  docker ps
+  102  dockerps -a
+  103  docker ps -a
+  104  cd ..
+  105  ls
+  106  cd java-springboot/
+  107  ;s
+  108  ls
+  109  cat pom.xml
+  110  ls
+  111  cat Dockerfile
+  112  ls
+  113  mvn clean package
+  114  ls
+  115  cd target/a
+  116  ls
+  117  cd target/
+  118  s
+  119  ls
+  120  cdW
+  121  cd WebApp/
+  122  ls
+  123  vim index.jsp
+  124  cd ..
+  125  ls
+  126  cd .
+  127  ls
+  128  docker run -itd -p 4545:8080 tomcat
+  129  ls
+  130  docker ps
+  131  cd ..
+  132  ls
+  133  cat Dockerfile
+  134  docker cp target/WebApp.war   magical_meitner:/usr/local/tomcat/webapps/
+  135  docker cp target/WebApp   magical_meitner:/usr/local/tomcat/webapps/
+  136  docker images
+  137  cat Dockerfile
+  138  ls
+  139  docker build -t myjavacode .
+  140  hi
+
+
+
+ docker rmi -f $(docker images -aq)
+
+7  cat Dockerfile
+  138  ls
+  139  docker build -t myjavacode .
+  140  hi
+  141  history
+  142  ls
+  143  cd java-springboot/
+  144  ls
+  145  cat Dockerfile
+  146  docker build -t myjavaapp .
+  147  docker images
+  148  docker rmi -f $(docker images -aq)
+  149  docker images
+  150  df -hT
+  151  cd
+  152  ls
+  153  cd code/
+  154  ;s
+  155  ls
+  156  cd ../java-springboot/
+  157  ls
+  158  docker build -t myjavaapp .
+  159  docker images
+  160  ls
+  161  cd
+  162  ls
+  163  df -hT
+  164  apt remove apache2  -y
+  165  df -hT
+  166  apt purge apache2  -y
+  167  df -hT
+  168  history
+
+
+
+
+
+ apt update && apt install git curl docker.io wget -y
+
+https://github.com/mdhack0316/java-springboot
+
+
+
+ 1  apt update && apt install git curl docker.io wget -y
+    2  df- hT
+    3  df -hT
+    4  git clone https://github.com/mdhack0316/java-springboot
+    5  cd java-springboot/
+    6  ls
+    7  docker build -t myjavapp .
+    8  docker images
+    9  docekr rmi -f 238b2f73d7ba
+   10  docker rmi -f 238b2f73d7ba
+   11  docker images
+   12  df -hT
+   13  docker run -itd -p 4646:8080  myjavapp
+   14  cat Dockerfile
+   15  history
+
+
