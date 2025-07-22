@@ -138,3 +138,88 @@ https://github.com/mdhack0316/java-springboot
    15  history
 
 
+
+
+Ansible
+
+
+   26  sudo apt install -y software-properties-common
+   27  sudo add-apt-repository --yes --update ppa:ansible/ansible
+   28  sudo apt install -y ansible
+   29  ansible --version
+   30  cd /etc/ansible
+   31  mkdir  -p /etc/ansible
+   32  cd /etc/ansible
+   33  ls
+   34  touch hosts
+   35  touch ansible.cfg
+   36  ls
+   37  ls -l
+   38  vim ansible.cfg
+   39  ansible-doc  -l
+   40  ansible-doc  -l  | wc -l
+   41  ls
+   42  ping google.com
+   43  ansible  -m shell  ping google.com
+   44  ansible  -m shell  -a  ping google.com
+   45  ansible  -m shell  -a  "ping google.com "
+   46  ansible localhost  -m shell  -a  "ping google.com"
+   47  ansible localhost  -m shell  -a  "ls"
+   48  ls
+   49  ansible localhost  -m shell  -a  "date"
+   50  date
+   51  ansible localhost -m apt -a "apt install apache2 -y"
+   52  ansible-doc  apt
+   53  ansible localhost -m apt -a "name=apache2  state=present"
+   54  ansible localhost -m copy -a "content='hello world' dest=/var/www/html/index.html   "
+   55  history
+
+
+
+  56  apt purge apache2 -y
+   57  ls
+   58  vim  apache.yaml
+   59  ansible-doc  apt
+   60  vim apache.yaml
+   61  cat apache.yaml
+   62  ansible-playbook  --list-tasks apache.yaml
+   63  vim apache.yaml
+   64  ansible-playbook  --list-tasks apache.yaml
+   65  vim apache.yaml
+   66  ansible-doc  service
+   67  vim apache.yaml
+   68  ansible-playbook  --list-tasks apache.yaml
+   69  ansible-playbook apache.yaml
+   70  cat apache.yaml
+   71  vim hosts
+
+
+
+root@trainer:/etc/ansible# cat ansible.cfg
+[defaults]
+inventory=/etc/ansible/hosts
+
+
+
+root@trainer:/etc/ansible# cat apache.yaml
+---
+- name: Configuring Apache Server
+  hosts: localhost
+  tasks:
+  - name: Install apache httpd  (state=present is optional)
+    ansible.builtin.apt:
+      name: apache2
+      state: present
+
+  - name: Create index.html file
+    copy:
+      content: "Hello From Ansible"
+      dest: /var/www/html/index.html
+
+
+  - name: starting service
+    service:
+      name: apache2
+      state: started
+
+
