@@ -21,3 +21,27 @@ Waf acl   attaching lb a
 
 
 And then allow, block , captcha 
+
+
+
+
+S3
+
+Create s3 bucket without versioning with block all public access
+Upload one file 
+ Access it 
+Change permission to access file
+ Upload same name file with diff content
+Verify for older version 
+ Enable versioning
+ Upload again you will find both files
+
+
+
+
+Cloudwatch  dashboard
+Create trail   
+
+
+Please clean up everything you created after done with the practical. 
+
