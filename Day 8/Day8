@@ -1,0 +1,23 @@
+IAM
+
+
+ Try to create new user  with assword -   ec2 readonly access and then login 
+And try creating ec2 machine
+ Give that user  ec2 admin access then again try it 
+ Create group and add atleast 3 users  into it with ec2 fullad min access permission 
+
+
+
+WAF - Web Application firewall
+
+
+Create one ec2 with aache 
+Create tg 
+Create  LB
+
+
+Crate waf with your public ip - ipset rule
+Waf acl   attaching lb a
+
+
+And then allow, block , captcha 
