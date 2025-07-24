@@ -23,3 +23,91 @@ Ecs tactical  – oregon only
 Create account on bitbucket do same practical as gthub
  Create freetrail account on jfrog and try to upload image 
 Scan any docker image using trivy 
+
+
+
+
+
+
+ 94  terraform
+   95  wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+   96  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+   97  sudo apt update && sudo apt install terraform
+   98  terraform
+   99  mkdir code
+  100  cd code/
+  101  ls
+  102  aws configure
+  103  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  104  unzip awscliv2.zip
+  105  sudo ./aws/install
+  106  apt install unzip
+  107  unzip awscliv2.zip
+  108  ./aws/ind
+  109  ./aws/install
+  110  aws
+  111  aws configure
+  112  ls -a  /root/
+  113  cd /root/.aws
+  114  ls
+  115  cat config
+  116  cat credentials
+  117  cd
+  118  ls
+  119  cd code/
+  120  ls
+  121  mkdir terraform
+  122  cd terraform/
+  123  ls
+  124  vim ec2.tf
+  125  cat ec2.tf
+  126  terraform init
+  127  ls -la
+  128  ls .terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/
+  129  ;s
+  130  ls .terraform/providers/registry.terraform.io/hashicorp/aws/5.100.0/linux_amd64/
+  131  ls
+  132  vim ec2.tf
+  133  terraform validate
+  134  vim ec2.tf
+  135  terraform validate
+  136  vim ec2.tf
+  137  terraform validate
+  138  cat ec2.tf
+  139  vim ec2.tf
+  140  cat ec2.tf
+  141  terraform validate
+  142  terraform fmt
+  143  terraform fmt ec2.tf
+  144  cat ec2.tf
+  145  terraform plan
+  146  terraform apply
+  147  terraform destroy
+  148  cat ec2.tf
+  149  vim ec2.tf
+  150  cat ec2.tf
+  151  history
+root@trainer:~/code/terraform# cat ec2.tf
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0" # specify a version constraint
+    }
+  }
+}
+
+
+
+resource "aws_instance" "example" {
+  ami           = "ami-05f991c49d264708f"
+  instance_type = "t3a.micro"
+  tags = {
+    Name = "Mayank-terraform-DevSecOps"
+  }
+  key_name        = "devsecops"
+  security_groups = ["MainSG"]
+}
+
+
+
