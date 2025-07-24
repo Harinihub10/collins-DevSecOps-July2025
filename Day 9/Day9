@@ -1,0 +1,25 @@
+   80  docker images
+   81  docker login -umayank123modi@gmail.com trialnxq702.jfrog.io
+   82  docker tag myjavapp:latest trialnxq702.jfrog.io/mayank-docker/myjavapp:latest
+   83  docker push trialnxq702.jfrog.io/mayank-docker/myjavapp:latest
+   84  trivy
+   85  sudo apt-get install wget apt-transport-https gnupg lsb-release
+   86  wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+   87  echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+   88  sudo apt-get update
+   89  sudo apt-get install trivy
+   90  docker images
+   91  trivy imge  myjavapp
+   92  trivy image   myjavapp
+
+
+
+
+
+
+
+Ecs tactical  – oregon only 
+ Delete everything
+Create account on bitbucket do same practical as gthub
+ Create freetrail account on jfrog and try to upload image 
+Scan any docker image using trivy 
