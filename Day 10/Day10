@@ -1,0 +1,61 @@
+Apache port configuration 
+
+
+ 1  apt update && apt install apache2 -y ; echo hi > /var/www/html/index.html ; systemctl start apache2
+    2  netstat -tulpen
+    3  apt install net-tools -y
+    4  netstat -tulpen
+    5  vim /etc/apache2/apache2.conf
+    6  cd /etc/apache2/
+    7  ls
+    8  vim ports.conf
+    9  systemctl restart apache2
+   10  netstat -tulpen
+   11  history
+
+
+
+
+
+SSH port ontfiguration 
+
+
+ 10  netstat -tulpen
+   11  history
+   12  cd
+   13  netstat
+   14  ss
+   15  ss -tup
+   16  ss --help
+   17  ss -l
+   18  vim /etc/ssh/sshd_config
+   19  systemctl restart ssh
+   20  vim /etc/ssh/sshd_config
+   21  vim /etc/ssh/ssh_config
+   22  systemctl restart ssh
+   23  systemctl restart sshd
+   24  systemctl restart ssh
+   25  cd /etc/ssh/
+   26  ls
+   27  ls ssh_config.d/
+   28  ls sshd_config.d/
+   29  vim  sshd_config.d/60-cloudimg-settings.conf
+   30  vim ssh_config
+   31  vim sshd_config
+   32  systemctl enable --now ssh
+   33  systemctl restart ssh
+   34  netstat -tulpen
+   35  ls
+   36  vim ssh_import_id
+   37  ls
+   38  vim sshd_config
+   39  history
+
+
+
+
+Apache – 
+
+Ssh 
+
+Kms 
