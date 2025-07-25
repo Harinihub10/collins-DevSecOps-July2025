@@ -59,3 +59,52 @@ Apache –
 Ssh 
 
 Kms 
+
+
+
+ 46  kubectl create ns mayank
+   47  kubectl config get-contexts
+   48  kubectl config set-content kubernetes-admin@kubernetes  --namespace mayank
+   49  kubectl config set-context kubernetes-admin@kubernetes  --namespace mayank
+   50  kubectl get pods
+   51  kubectl create deployment strategy  --image  mdhack/strategy:v1
+   52  kubectl scale deployment strategy --replicas 20
+   53  kubectl get pods
+   54  kubectl expose deployment strategy --port 80 --type NodePort
+   55  kubectl get svc
+   56  kubectl get deployment -o wide
+   57  #kubectl set image deployment strategy     strategy=mdhack/strategy:v2
+   58  kubectl describe deployment strategy
+   59  kubectl  set image deployment strategy     strategy=mdhack/strategy:v2   ; kubectl  get pods
+   60  kubectl  get pods
+   61  kubectl rollout history deployment strategy
+   62  kubectl rollout undo deployment strategy
+   63  kubectl  get pods
+   64  kubectl rollout history deployment strategy
+   65  kubectl delete deployment strategy
+   66  kubectl create deployment strategy  --image  mdhack/strategy:v1   --dry-run -o yaml >  dep.yml
+   67  vim dep.yml
+   68  kubectl create -f dep.yml
+   69  kubectl scale deployment strategy --replicas 20
+   70  kubectl get svc
+   71  kubectl describe deployment strategy
+   72  kubectl  set image deployment strategy     strategy=mdhack/strategy:v2   ; kubectl  get pods
+   73  kubectl  get pods
+   74  kubectl rollout undo deployment strategy  ; kubectl get pods
+   75  kubectl get pods
+   76  kubectl delete all --all --force
+   77  kubectl create  deployment blue  --image mdhack/strategy:v1
+   78  kubectl expose deployment blue --port 80 --type NodePort
+   79  kubectl get svc
+   80  kubectl create  deployment green  --image mdhack/strategy:v2
+   81  kubectl get deployment --show-labels
+   82  kubectl describe svc blue
+   83  kubectl get pods -o wide
+   84  kubectl edit svc blue
+   85  kubectl describe svc blue
+   86  kubectl delete deployment blue
+   87  kubectl delete all --all --force
+   88  history
+
+
+
