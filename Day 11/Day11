@@ -35,3 +35,30 @@ jenkins         ALL=(ALL:ALL)    NOPASSWD: ALL
 root@jenkins:~#
 
 
+
+
+
+
+
+Create one job that will create a container for you and access application 
+
+
+
+
+ Create kind of a pipeline 
+Fork my repo     https://github.com/mdhack0316/java-springboot/
+Create   first job as it will clone the code and build the image 
+Second job will  test your container app 
+ Upload image 
+
+
+
+
+
+
+Mayank mayank 
+
+
+
+http://35.94.186.177:8080/
+
