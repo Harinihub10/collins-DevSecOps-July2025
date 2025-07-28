@@ -1,0 +1,37 @@
+Jenkins 
+
+
+sudo apt update && sudo apt install apache2 -y
+sudo chmod -R  777 /var/www/
+sudo echo "<h1>Hello From Jenkins</h1>"  >  /var/www/html/index.html
+sudo systemctl restart apache2 
+
+
+
+
+
+http://35.94.186.177:8080/
+
+
+
+mayank
+Mayank
+
+
+
+Create one ec2 machine with  t3a.medium  ubuntu machine with 20 gb storage 
+ Install jenkin from chatGPT
+ Accessing the jenkins 
+Start creating Jobs 
+ Tgry to give permission to jenkins user\
+ Using a jenkins job confogire apache server and share the url to me so i can verify
+
+
+
+
+
+root@jenkins:~# cat /etc/sudoers | grep -i jenkins
+jenkins         ALL=(ALL:ALL)    NOPASSWD: ALL
+root@jenkins:~#
+
+
