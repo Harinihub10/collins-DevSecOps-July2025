@@ -1,0 +1,21 @@
+  75  kubectl
+   76  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   77  ls
+   78  chmod +x kubectl
+   79  cp kubectl  /usr/bin/
+   80  kubectl
+   81  kubectl get nodes
+   82  cat /etc/passwd
+   83  cd /var/lib/jenkins/
+   84  ls -la
+   85  ls
+   86  ls- la
+   87  mkdir .kube
+   88  cd
+   89  ls
+   90  mkdir  /var/lib/jenkins/.kube  ; cd /var/lib/jenkins/.kube/  ; wget 3.148.159.94/config ; chmod 777 config
+
+
+
+
+
