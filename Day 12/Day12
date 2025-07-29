@@ -19,3 +19,55 @@
 
 
 
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone the Code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/mdhack0316/jenkinsdockerapp'
+                }
+            }
+        stage('Building War file') {
+            steps{
+                sh 'mvn clean package'
+            }
+        }
+        stage('Building Docker Image') {
+            steps {
+                sh 'docker build -t  mdhack/javaapp:${BUILD_NUMBER} . '
+            }
+        }
+        stage('Testing Docker Container locally') {
+            steps {
+                sh 'docker rm -f test1'
+                sh 'docker run -itd -p 4545:8080 --name test1 mdhack/javaapp:${BUILD_NUMBER}'
+            }
+        }
+        stage('Verifying the APp') {
+            steps {
+                sh 'sleep 10'
+                sh 'curl http://44.248.181.21:4545/java-web-app/ | grep -i sehwag'
+            }
+        }
+        stage('Push docker image') {
+            steps {
+                sh 'docker login -u mdhack -p $dockerpassword'
+                sh 'docker push mdhack/javaapp:${BUILD_NUMBER}'
+            }
+        }
+        stage('Release the App into production') {
+            steps {
+                input 'Release this to production? '
+            }
+        }
+        stage('Deployment in kubernetes') {
+            steps {
+                sh 'kubectl delete deployment mayank'
+                sh 'kubectl create deployment mayank --image mdhack/javaapp:${BUILD_NUMBER}'
+                sh 'kubectl apply -f webappsvc.yml'
+            }
+        }
+        }
+        
+}
